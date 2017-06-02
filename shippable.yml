@@ -21,7 +21,7 @@ build:
     - ls -al
     
   on_success:
-    - git push -f https://git.heroku.com/rc-testapp.git master
+    - git push -f git@heroku.com:$APP_NAME.git master
    # - git push -f git@heroku.com:$APP_NAME.git $BRANCH
    # - git push -f git@heroku.com:$APP_NAME.git master 
   #  - git push -f heroku $BRANCH:master    
