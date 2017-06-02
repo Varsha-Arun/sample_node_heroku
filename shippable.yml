@@ -8,11 +8,11 @@ node_js:
 
 env:
   global:
-    - APP_NAME=rc-test
-    - FOO=FUBU
+    - APP_NAME=rc-testapp
+    - BRANCH=withouttoolbelt
 
-  matrix:
-    - M1=ONE
+ # matrix:
+ #   - M1=ONE
 
 build:
 
@@ -21,6 +21,7 @@ build:
     - ls -al
     
   on_success:
-    - git push -f git@heroku.com:$APP_NAME.git master 
+    - git push -f git@heroku.com:$APP_NAME.git yourbranch:withouttoolbelt
+   # - git push -f git@heroku.com:$APP_NAME.git master 
   #  - git push -f heroku $BRANCH:master    
   
