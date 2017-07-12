@@ -19,6 +19,7 @@ build:
     - which heroku || wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
     - ps -eax
     - ls -al
+    - echo "hello world"
     
   on_success:
     - test -f ~/.ssh/id_rsa.heroku || ssh-keygen -y -f /tmp/ssh/00_sub > ~/.ssh/id_rsa.heroku && heroku keys:add ~/.ssh/id_rsa.heroku
